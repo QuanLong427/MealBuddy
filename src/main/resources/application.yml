@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: mealbuddy
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mealbuddy_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    username: root
+    password: "000000"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.mealbuddy.model
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  port: 8080
+agentscope:
+  dashscope:
+    api-key: sk-33c66befed1d4c8b853367d5e483419f
+mealbuddy:
+  llm:
+    main-model: qwen-max
+    light-model: qwen-turbo
+  session:
+    max-history-turns: 10
+logging:
+  level:
+    com.mealbuddy: INFO
