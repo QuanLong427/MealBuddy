@@ -37,3 +37,6 @@ build/
 MyNote/
 
 openspec/
+
+### Local secrets ###
+application-local.yml
